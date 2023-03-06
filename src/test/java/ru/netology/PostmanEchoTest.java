@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.*;
 public class PostmanEchoTest {
 
     @Test
-    void shouldReturnRest(){
+    void shouldReturnRest() {
         given()
                 .baseUri("https://postman-echo.com")
                 .body("some data")
@@ -16,8 +16,8 @@ public class PostmanEchoTest {
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("data"))
-                ;
+                .body("data", equalTo("some data"))
+        ;
 
     }
 }
